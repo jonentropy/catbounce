@@ -16,7 +16,8 @@ type
   private
     MovingUp, MovingRight: boolean;
   public
-    constructor Create(Sender:TComponent; Im: TImage);
+    constructor Create(Sender:TComponent); override;
+    constructor Create(Sender:TComponent; Im: TImage); overload;
     procedure Move;
   end;
 
@@ -50,9 +51,14 @@ implementation
 
 { TCat }
 
-constructor TCat.Create(Sender:TComponent; Im: TImage);
+constructor TCat.Create(Sender: TComponent);
 begin
   inherited Create(Sender);
+end;
+
+constructor TCat.Create(Sender:TComponent; Im: TImage);
+begin
+  Create(Sender);
   Self.Picture.Bitmap.Assign(Im.Picture.Bitmap);
   MovingUp := Random(2) = 0;
   MovingRight := Random(2) = 0;
