@@ -8,7 +8,7 @@ object frmMain: TfrmMain
   ClientWidth = 320
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '0.9.30'
+  LCLVersion = '0.9.30.4'
   object btnClicky: TButton
     Left = 120
     Height = 25
@@ -117,7 +117,7 @@ object frmMain: TfrmMain
   end
   object lblBirthday: TLabel
     Left = 0
-    Height = 14
+    Height = 22
     Top = 216
     Width = 320
     Alignment = taCenter
